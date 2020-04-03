@@ -1,5 +1,4 @@
 
-
 //Make the DIV element draggagle:
 
 var draggables = document.getElementsByClassName("drag");
