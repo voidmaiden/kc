@@ -216,7 +216,6 @@ var randomRhythm = new Array();
 
 // function to randomly generate + display cards:
 
-document.getElementById("difficulty").defaultValue = '1';
 $('#difficulty').change(function() {
     if ($(this).val() == '0') {
         $('.easy').css('display', 'inline-block');
