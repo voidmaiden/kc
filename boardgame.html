@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="scripts/boardgame.js"></script>
+<link href="stylesheets/boardgame.css" rel="stylesheet">
+
+<title>KC & Friends - Demo</title>
+
+<link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+<link rel="manifest" href="favicon_io/site.webmanifest">
+
+</head>
+
+<body>
+
+<div id="header">
+
+<div id="instructions">
+
+<img id="cloud" src="https://kcfriends.sitedistrict.com/wp-content/uploads/2020/03/KC-Logo-Cloud-Shadow-r5.png">
+
+<h2>Instructions</h2>
+Be the first to reach the finish line!
+
+<ol>
+<li>The youngest player should go first.</li>
+<li>Start by flipping over a challenge card. Then complete the challenge on the card!</li>
+<li>After completing the challenge, you can flip over a "rhythm" card.</li>
+<li>Clap out the rhythm! If you clapped four times, you can move forward four spaces; if you clapped three times, three spaces, etc.</li>
+<li>The first player to reach the end wins the game!</li>
+</ol>
+
+</div>
+
+</div>
+<div id="characters"><h2>Characters</h2>
+<div style="width:100%;height:100%;position:relative">
+
+<img class="drag char hand" src="assets/characters/RHAND.png" style="top: 20px; left: 60px;">
+<img class="drag char" src="assets/characters/Luigi.png" style="top: 0; left: 220px">
+<img class="drag char" src="assets/characters/MONKEY.png" style="top: 100px; left: 20px">
+<img class="drag char" src="assets/characters/teacher.png" style="top: 60px; left: 140px">
+<img class="drag char hand" src="assets/characters/LHAND.png" style="top: 120px; left: 220px">
+
+</div>
+
+</div>
+<div id="cards">
+
+<center><h2>Flip a card!</h2>
+
+<div style="margin: 5px auto">Difficulty:
+<span class="easy diff">EASY</span>
+<span class="medium diff">MEDIUM</span>
+<span class="hard diff">HARD</span>
+<span class="expert diff">EXPERT!</span>
+<br><input type="range" id="difficulty" name="difficulty" class="slider" min="0" max="3"></div>
+
+<div id="cardtable">
+<div class="carddiv"><div id="chcardimg" class="cardcontainer"></div><h3>pull a challenge card</h3></div>
+<div class="carddiv"><div id="rhcardimg" class="cardcontainer"></div><h3>pull a rhythm<br>card</h3></div>
+</div>
+
+<button id="next_turn">Move on to the next player!</button></center>
+
+</div>
+<div id="board">
+<div style="position:relative;width:100%;height:100%;"><div id="title"><h1>Race to the Finish</h1></div><img id="game" src="images/justboard1x.png"></div>
+</div>
+
+</body>
+
+</html>
