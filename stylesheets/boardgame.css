@@ -93,7 +93,7 @@ img#title {
     width: 23%;
     height: 40%;
     text-align: center;
-    z-index: 100;
+    z-index: 1000;
 }
 .pos_rel {
     width: 100%;
