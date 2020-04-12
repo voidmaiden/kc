@@ -50,6 +50,23 @@ function dragElement(elmnt) {
   }
 }
 
+// challenge cards
+
+var easyChallenges = document.getElementsByClassName('easyrow');
+var medChallenges = document.getElementsByClassName('medrow');
+var hardChallenges = document.getElementsByClassName('hardrow');
+var expertChallenges = document.getElementsByClassName('expertrow');
+
+// dice
+
+var dice = new Array();
+    dice[0] = "assets/dice/one.png";
+    dice[1] = "assets/dice/two.png";
+    dice[2] = "assets/dice/three.png";
+    dice[3] = "assets/dice/four.png";
+    dice[4] = "assets/dice/five.png";
+    dice[5] = "assets/dice/six.png";
+
 // playing cards for demo
 
 var easyBlackCard = new Array();
@@ -251,14 +268,19 @@ $('input[type=range]').on('input', function() {
     $(this).trigger('change');
 });
 $('#chcardimg').click(function() {
-    $(this).parent().addClass('whitebg');
     if ($('#difficulty').val() == '0') {
-        var number = Math.floor(Math.random()*easyBlackCard.length);
-        $(this).prepend('<img src="'+easyBlackCard[number]+'" class="pulledch pull">');
+        $('.pull').css('display', 'none');
+        var number = Math.floor(Math.random()*easyChallenges.length);
+        $(easyChallenges[number]).css('display', 'table').addClass('pull');
+        var carddiv = $(easyChallenges[number]).parents('.carddiv');
+        $(carddiv).find('h3').css('display', 'none');
     }
     else if ($('#difficulty').val() == '1') {
-        var number = Math.floor(Math.random()*mediumBlackCard.length);
-        $(this).prepend('<img src="'+mediumBlackCard[number]+'" class="pulledch pull">');
+        $('.pull').css('display', 'none');
+        var number = Math.floor(Math.random()*medChallenges.length);
+        $(medChallenges[number]).css('display', 'table').addClass('pull');
+        var carddiv = $(medChallenges[number]).parents('.carddiv');
+        $(carddiv).find('h3').css('display', 'none');
     }
     else if ($('#difficulty').val() == '2') {
         var number = Math.floor(Math.random()*hardBlackCard.length);
@@ -269,10 +291,9 @@ $('#chcardimg').click(function() {
         $(this).prepend('<img src="'+expertBlackCard[number]+'" class="pulledch pull">');
     }
 });
-$('#rhcardimg').click(function() {
-    $(this).parent().addClass('whitebg');
-    var number = Math.floor(Math.random()*randomRedCard.length);
-    $(this).prepend('<img src="'+randomRedCard[number]+'" class="pulledrh pull">');
+$('#rollme').click(function() {
+    var number = Math.floor(Math.random()*dice.length);
+    $(this).prepend('<img src="'+dice[number]+'" class="pulledrh pull">');
     $('#next_turn').addClass('fadein');
 });
 
@@ -280,8 +301,8 @@ $('#rhcardimg').click(function() {
 
 $('#next_turn').click(function() {
     $('.pull').css('display', 'none');
+    $('.carddiv h3').css('display', 'block');
     $(this).removeClass('fadein');
-    $('.carddiv').removeClass('whitebg');
 });
 
 }
