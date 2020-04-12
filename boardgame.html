@@ -53,15 +53,67 @@ Be the first to reach the finish line!
 <center><h2>Flip a card!</h2>
 
 <div style="margin: 5px auto">Difficulty:
-<span class="easy diff">EASY</span>
-<span class="medium diff">MEDIUM</span>
-<span class="hard diff">HARD</span>
-<span class="expert diff">EXPERT!</span>
-<br><input type="range" id="difficulty" name="difficulty" class="slider" min="0" max="3"></div>
+<span class="easy diff">LEVEL 1</span>
+<span class="medium diff">LEVEL 2</span>
+<span class="hard diff">LEVEL 3</span>
+<span class="expert diff">LEVEL 4</span>
+<br><input type="range" id="difficulty" name="difficulty" class="slider" min="0" max="1"></div>
 
 <div id="cardtable">
-<div class="carddiv"><div id="chcardimg" class="cardcontainer"></div><h3>pull a challenge card</h3></div>
-<div class="carddiv"><div id="rhcardimg" class="cardcontainer"></div><h3>pull a rhythm<br>card</h3></div>
+<div class="pullcard carddiv"><div class="blank"></div><div id="chcardimg" class="cardcontainer"></div><h3>pull a challenge card</h3>
+<div id="easychallenges" class="chcontainer">
+<div class="easyrow row"><div class="easychallenge">Play this sentence on the piano: the CAGED EGGS FACED the AGED BEEF</div></div>
+<div class="easyrow row"><div class="easychallenge">Name two friends that are played with the same finger number, but in different hands</div></div>
+<div class="easyrow row"><div class="easychallenge">What notes are a step away from the Dude?</div></div>
+<div class="easyrow row"><div class="easychallenge">What notes are a skip away from Elfee E?</div></div>
+<div class="easyrow row"><div class="easychallenge">What finger does L hand use to play the Girl? What does R hand use for Mr. Face?</div></div>
+<div class="easyrow row"><div class="easychallenge">Say the musical alphabet forwards and backwards!</div></div>
+<div class="easyrow row"><div class="easychallenge">Which of these friends is not like the others:<ul style="padding-left:30px;text-align:left"><li>Fit Fred</li><li>Mr. Face</li><li>Elf E</li><li>C saw C</li></ul></div></div>
+<div class="easyrow row"><div class="easychallenge">Make up a finger pattern with R hand, then copy that pattern with L hand!</div></div>
+<div class="easyrow row"><div class="easychallenge">Make a peace sign with your fingers... what finger numbers are you holding up?</div></div>
+<div class="easyrow row"><div class="easychallenge">Fill in the blanks: Look at me, I’m _____ __ ! I’m in the space, __ _____ _____!</div></div>
+<div class="easyrow row"><div class="easychallenge">Fill in the blanks: R hand reads music from the ______ Clef. L hand reads from the _____ Clef.</div></div>
+<div class="easyrow row"><div class="easychallenge">Play<br>L 5 4 3 2 1<br>R 1 2 3 4 5<br>up and down as fast as you can</div></div>
+<div class="easyrow row"><div class="easychallenge">Try playing a chord with your R hand: put your thumb on C, then press down fingers 1, 3 and 5</div></div>
+<div class="easyrow row"><div class="easychallenge">Play this finger pattern with BOTH HANDS:<br>1 2 1 3 1 4 1 5<br>1 5 1 4 1 3 1 2 1</div></div>
+<div class="easyrow row"><div class="easychallenge">Play a song you have learned without looking at your hands</div></div>
+<div class="easyrow row"><div class="easychallenge">Play a song you have learned without looking at the music</div></div>
+<div class="easyrow row"><div class="easychallenge">Play from the bottom of the piano to the top, skipping every other note (only white notes!)</div></div>
+<div class="easyrow row"><div class="easychallenge">Play from the top of the piano to the bottom, playing ALL the notes (even the black keys!)</div></div>
+<div class="easyrow row"><div class="easychallenge">Name all of the line friends!</div></div>
+<div class="easyrow row"><div class="easychallenge">Name all of the space friends!</div></div>
+</div>
+<div id="medchallenges" class="chcontainer">
+<div class="medrow row"><div class="medchallenge">How many syllables are in "pepperoni?"</div></div>
+<div class="medrow row"><div class="medchallenge">Clap the syllables in this sentence: Luigi LOVES pepperoni pizza!</div></div>
+<div class="medrow row"><div class="medchallenge">How many friends do you need to play a chord? Play a chord anywhere on the piano!</div></div>
+<div class="medrow row"><div class="medchallenge">Play a chord with your R hand, then play the same chord with L hand!</div></div>
+<div class="medrow row"><div class="medchallenge">Play a song you have been working on as quietly as possible</div></div>
+<div class="medrow row"><div class="medchallenge">Play a song you have learned from memory!</div></div>
+<div class="medrow row"><div class="medchallenge">Play a song you have been working on without looking at your hands!</div></div>
+<div class="medrow row"><div class="medchallenge">Name two different combinations of notes that each add up to four beats!</div></div>
+<div class="medrow row"><div class="medchallenge">Make an 8 beat rhythm, then clap it out!</div></div>
+<div class="medrow row"><div class="medchallenge">What note divides the bass clef in half?</div></div>
+<div class="medrow row"><div class="medchallenge">What notes are a step away from Divided by D?</div></div>
+<div class="medrow row"><div class="medchallenge">What friend would say... "I am a friend who doesn’t say anything!"</div></div>
+<div class="medrow row"><div class="medchallenge">What friend would say... "My mouth is on the top line of the bass staff"</div></div>
+<div class="medrow row"><div class="medchallenge">What friend would say... "I like everything to be even."</div></div>
+<div class="medrow row"><div class="medchallenge">What friend would say... "You’ll probably forget me."</div></div>
+<div class="medrow row"><div class="medchallenge">What is a measure? Find and point to an example in your book!</div></div>
+<div class="medrow row"><div class="medchallenge">Are there any notes that L hand has played that R hand hasn't? What about the other way around?</div></div>
+<div class="medrow row"><div class="medchallenge">If the time signature is 3/4, how many beats are in a measure?</div></div>
+<div class="medrow row"><div class="medchallenge">How many beats are in this measure: <span class="notation">d W w</span></div></div>
+<div class="medrow row"><div class="medchallenge">How many beats are in this measure: <span class="notation">H d</span></div></div>
+<div class="medrow row"><div class="medchallenge">How many beats are in this measure: <span class="notation">dqq</span></div></div>
+<div class="medrow row"><div class="medchallenge">How many beats are in this measure: <span class="notation">qqQqd</span></div></div>
+<div class="medrow row"><div class="medchallenge">How many beats are in this measure: <span class="notation">hhQq</span></div></div>
+<div class="medrow row"><div class="medchallenge">How many beats should you hold this rest: <span class="notation">Q</span></div></div>
+<div class="medrow row"><div class="medchallenge">How many beats should you hold this rest: <span class="notation">H</span></div></div>
+<div class="medrow row"><div class="medchallenge">How many beats should you hold this rest: <span class="notation">W</span></div></div>
+<div class="medrow row"><div class="medchallenge">How many beats should you hold these tied notes: <span class="notation">hUq</span></div></div>
+</div>
+</div>
+<div class="carddiv">then roll the die:<div id="rollme"></div></div>
 </div>
 
 <button id="next_turn">Move on to the next player!</button></center>
