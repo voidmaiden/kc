@@ -10,12 +10,22 @@
     font-family: Cartoonist;
     src: url('../fonts/cartoonist.ttf');
 }
+@font-face {
+    font-family: MusiSync;
+    src: url('../fonts/Musisync-qYy6.ttf');
+}
 body {
     background: url('../images/bg-tiled-yellow.png') fixed;
     overflow: hidden;
     font-family: Cartoonist;
     font-size: 17px;
     cursor: crosshair;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome, Opera and Firefox */
 }
 h1 {
     font: normal 40px Riffic;
@@ -32,6 +42,11 @@ h2, h3 {
 h3 {
     font-size: 20px;
     text-transform: uppercase;
+}
+span.notation {
+    font-family: MusiSync;
+    display: block;
+    font-size: 40px;
 }
 #cloud {
     width: 100%;
@@ -196,13 +211,53 @@ span.expert {
 .carddiv {
     width: 50%;
     height: 200px;
-    background-image: url('../images/bg-tiled-blue.png');
-    background-size: 100px;
     display: table-cell;
     vertical-align: middle;
     text-align: center;
     position: relative;
+    overflow: hidden;
+}
+.pullcard {
+    background-image: url('../images/bg-tiled-blue.png');
+    background-size: 100px;
     border: 4px solid #000;
+}
+#chcardimg {
+    z-index: 999;
+}
+.chcontainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 998;
+}
+.chcontainer .row {
+    border-collapse: collapse;
+    width: 100%;
+    height: 100%;
+}
+.easyrow, .medrow, .hardrow, .expertrow {
+    display: none;
+}
+.easychallenge, .medchallenge, .hardchallenge, .expertchallenge {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    background: url('https://i.imgur.com/hYy8AUw.png');
+}
+#rollme {
+    background: #fff url('../assets/dice/rollme.png');
+    background-size: 89px;
+    width: 89px;
+    height: 89px;
+    border: 3px solid #000;
+    overflow: hidden;
+    margin: 10px auto 0px;
+    border-radius: 10px;
 }
 .whitebg {
     background: #fff;
