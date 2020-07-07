@@ -26,6 +26,7 @@ var mediumCards = [
     'https://i.imgur.com/vhckXr0.png',
     'https://i.imgur.com/0PF4Fav.png'
     ]
+var easyMediumCards = easyCards.concat(mediumCards);
 var hardCards = [
     'https://i.imgur.com/Cf5el2Z.png',
     'https://i.imgur.com/sL9BHVq.png',
@@ -36,18 +37,8 @@ var hardCards = [
     'https://i.imgur.com/UncUMFI.png',
     'https://i.imgur.com/JHxeEKr.png'
     ]
+var easyMediumHard = easyMediumCards.concat(hardCards);
 var expertCards = [
-    'https://i.imgur.com/YbYB5VT.png',
-    'https://i.imgur.com/pryI9F5.png',
-    'https://i.imgur.com/mvoAMQo.png',
-    'https://i.imgur.com/APsh1GW.png',
-    'https://i.imgur.com/gvwYBTZ.png',
-    'https://i.imgur.com/Bfhn3cP.png',
-    'https://i.imgur.com/zWSuQr6.png',
-    'https://i.imgur.com/7mSiUIk.png',
-    'https://i.imgur.com/W5WSvNq.png',
-    'https://i.imgur.com/1gw7mdB.png',
-    'https://i.imgur.com/dQh4v4w.png',
     'https://i.imgur.com/sF9QSmg.png',
     'https://i.imgur.com/qbiRUJS.png',
     'https://i.imgur.com/cULM6FG.png',
@@ -65,14 +56,18 @@ window.onload = function () {
         var slider = document.getElementById('difficulty'),
             easy = document.getElementsByClassName('easy'),
             medium = document.getElementsByClassName('medium'),
+            easymedium = document.getElementsByClassName('easymedium'),
             hard = document.getElementsByClassName('hard'),
+            easymediumhard = document.getElementsByClassName('easymediumhard'),
             expert = document.getElementsByClassName('expert');
         slider.onchange = function() {
             if (slider.value == '0') {
                 for (var i = 0; i < 2; i++) {
                     easy[i].style.display = 'inline-block';
                     medium[i].style.display = 'none';
+                    easymedium[i].style.display = 'none';
                     hard[i].style.display = 'none';
+                    easymediumhard[i].style.display = 'none';
                     expert[i].style.display = 'none';   
                 }
             }
@@ -80,7 +75,9 @@ window.onload = function () {
                 for (var i = 0; i < 2; i++) {
                     easy[i].style.display = 'none';
                     medium[i].style.display = 'inline-block';
+                    easymedium[0].style.display = 'none';
                     hard[i].style.display = 'none';
+                    easymediumhard[i].style.display = 'none';
                     expert[i].style.display = 'none';
                 }
             }
@@ -88,7 +85,9 @@ window.onload = function () {
                 for (var i = 0; i < 2; i++) {
                     easy[i].style.display = 'none';
                     medium[i].style.display = 'none';
-                    hard[i].style.display = 'inline-block';
+                    easymedium[i].style.display = 'inline-block';
+                    hard[i].style.display = 'none';
+                    easymediumhard[i].style.display = 'none';
                     expert[i].style.display = 'none';
                 }
             }
@@ -96,7 +95,29 @@ window.onload = function () {
                 for (var i = 0; i < 2; i++) {
                     easy[i].style.display = 'none';
                     medium[i].style.display = 'none';
+                    easymedium[i].style.display = 'none';
+                    hard[i].style.display = 'inline-block';
+                    easymediumhard[0].style.display = 'none';
+                    expert[i].style.display = 'none';
+                }
+            }
+            else if (slider.value == '4') {
+                for (var i = 0; i < 2; i++) {
+                    easy[i].style.display = 'none';
+                    medium[i].style.display = 'none';
+                    easymedium[i].style.display = 'none';
                     hard[i].style.display = 'none';
+                    easymediumhard[i].style.display = 'inline-block';
+                    expert[i].style.display = 'none';
+                }
+            }
+            else if (slider.value == '5') {
+                for (var i = 0; i < 2; i++) {
+                    easy[i].style.display = 'none';
+                    medium[i].style.display = 'none';
+                    easymedium[i].style.display = 'none';
+                    hard[i].style.display = 'none';
+                    easymediumhard[i].style.display = 'none';
                     expert[i].style.display = 'inline-block';
                 }
             }
@@ -127,13 +148,27 @@ window.onload = function () {
                 cardContainer.appendChild(cardImage);
             }
             if (slider.value == '2') {
+                cardContainer.style.background = '#42BFAE';
+                var number = Math.floor(Math.random()*easyMediumCards.length);
+                cardImage.src = easyMediumCards[number];
+                cardImage.classList.addClass = 'active';
+                cardContainer.appendChild(cardImage);
+            }
+            if (slider.value == '3') {
                 cardContainer.style.background = '#2861AC';
                 var number = Math.floor(Math.random()*hardCards.length);
                 cardImage.src = hardCards[number];
                 cardImage.classList.addClass = 'active';
                 cardContainer.appendChild(cardImage);
             }
-            if (slider.value == '3') {
+            if (slider.value == '4') {
+                cardContainer.style.background = '#2861AC';
+                var number = Math.floor(Math.random()*easyMediumHard.length);
+                cardImage.src = easyMediumHard[number];
+                cardImage.classList.addClass = 'active';
+                cardContainer.appendChild(cardImage);
+            }
+            if (slider.value == '5') {
                 cardContainer.style.background = '#ABC54A';
                 var number = Math.floor(Math.random()*expertCards.length);
                 cardImage.src = expertCards[number];
