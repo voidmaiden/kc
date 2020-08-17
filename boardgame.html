@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html><head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
@@ -5,7 +6,7 @@
 <script src="scripts/boardgame.js"></script>
 <link href="stylesheets/boardgame.css" rel="stylesheet">
 
-<title>KC & Friends - Demo</title>
+<title>Race to the Finish</title>
 
 <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
@@ -16,14 +17,11 @@
 
 <body>
 
-<div id="header">
-
 <div id="instructions">
 
-<img id="cloud" src="images/KC-Logo-Cloud-Shadow-r5.png">
+<div id="view-instructions">
 
 <h2>Instructions</h2>
-Be the first to reach the finish line!
 
 <ol>
 <li>The youngest player should go first.</li>
@@ -32,22 +30,15 @@ Be the first to reach the finish line!
 <li>Clap out the rhythm! If you clapped four times, you can move forward four spaces; if you clapped three times, three spaces, etc.</li>
 <li>The first player to reach the end wins the game!</li>
 </ol>
+</div>
+<img src="images/cloud.png" class="title">
 
 </div>
 
-</div>
-<div id="characters"><h2>Characters</h2>
-<div class="pos_rel">
+<div id="sidebar">
 
-<img class="drag char hand" src="assets/characters/RHAND.png" style="top: 20px; left: 60px;">
-<img class="drag char" src="assets/characters/Luigi.png" style="top: 0; left: 220px">
-<img class="drag char" src="assets/characters/MONKEY.png" style="top: 100px; left: 20px">
-<img class="drag char" src="assets/characters/teacher.png" style="top: 60px; left: 140px">
-<img class="drag char hand" src="assets/characters/LHAND.png" style="top: 120px; left: 220px">
+<img src="images/KC-Logo-Cloud-Shadow-r5.png" class="title"><br><br>
 
-</div>
-
-</div>
 <div id="cards">
 
 <center><h2>Flip a card!</h2>
@@ -119,8 +110,27 @@ Be the first to reach the finish line!
 <button id="next_turn">Move on to the next player!</button></center>
 
 </div>
+
+</div>
+
 <div id="board">
 <div class="pos_rel"><div id="title"><img id="title" src="images/race-to-the-finish-title.png"></div><img id="game" src="images/justboard1x.png"></div>
+</div>
+
+<div id="characters">
+
+<img src="images/dragndrop.png" class="title">
+
+<div class="pos_rel" style="margin-top: 20px;">
+
+<img class="drag char hand" src="assets/characters/RHAND.png" style="top: 70px; right: 15%;">
+<img class="drag char" src="assets/characters/Luigi.png" style="top: 0; right: 60%">
+<img class="drag char" src="assets/characters/MONKEY.png" style="top: 170px; right: 15%">
+<img class="drag char" src="assets/characters/teacher.png" style="top: 140px; right: 60%">
+<img class="drag char hand" src="assets/characters/LHAND.png" style="top: 290px; right: 60%">
+
+</div>
+
 </div>
 
 </body>
