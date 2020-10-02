@@ -283,12 +283,18 @@ $('#chcardimg').click(function() {
         $(carddiv).find('h3').css('display', 'none');
     }
     else if ($('#difficulty').val() == '2') {
-        var number = Math.floor(Math.random()*hardBlackCard.length);
-        $(this).prepend('<img src="'+hardBlackCard[number]+'" class="pulledch pull">');
+        $('.pull').css('display', 'none');
+        var number = Math.floor(Math.random()*hardChallenges.length);
+        $(hardChallenges[number]).css('display', 'table').addClass('pull');
+        var carddiv = $(hardChallenges[number]).parents('.carddiv');
+        $(carddiv).find('h3').css('display', 'none');
     }
     else if ($('#difficulty').val() == '3') {
-        var number = Math.floor(Math.random()*expertBlackCard.length);
-        $(this).prepend('<img src="'+expertBlackCard[number]+'" class="pulledch pull">');
+        $('.pull').css('display', 'none');
+        var number = Math.floor(Math.random()*expertChallenges.length);
+        $(expertChallenges[number]).css('display', 'table').addClass('pull');
+        var carddiv = $(expertChallenges[number]).parents('.carddiv');
+        $(carddiv).find('h3').css('display', 'none');
     }
 });
 $('#rollme').click(function() {
