@@ -50,7 +50,6 @@ var expertCards = [
     'https://i.imgur.com/Loew64P.png'
     ]
 
-
 window.onload = function () {
 
     function sliderChange() {
@@ -120,7 +119,6 @@ window.onload = function () {
                     hard[i].style.display = 'none';
                     easymediumhard[i].style.display = 'none';
                     expert[i].style.display = 'inline-block';
-                
                 }
             }
         }
@@ -177,7 +175,6 @@ window.onload = function () {
                 cardImage.classList.addClass = 'active';
                 cardContainer.appendChild(cardImage);
             }
-            
         }
     }
     pullCard();
