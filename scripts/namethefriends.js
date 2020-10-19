@@ -50,9 +50,6 @@ var expertCards = [
     'https://i.imgur.com/Loew64P.png'
     ]
 
-var hardexpert = hardCards.concat(expertCards);
-var all = easyMediumCards.concat(hardCards, expertcards);
-
 
 window.onload = function () {
 
@@ -123,8 +120,7 @@ window.onload = function () {
                     hard[i].style.display = 'none';
                     easymediumhard[i].style.display = 'none';
                     expert[i].style.display = 'inline-block';
-                    hardexpert[i].style.display = 'none';
-                    all[i].style.display = 'none';
+                
                 }
             }
         }
@@ -181,13 +177,7 @@ window.onload = function () {
                 cardImage.classList.addClass = 'active';
                 cardContainer.appendChild(cardImage);
             }
-               if (slider.value == '6') {
-                cardContainer.style.background = '#ABC54A';
-                var number = Math.floor(Math.random()*hardexpert.length);
-                cardImage.src = hardexpert[number];
-                cardImage.classList.addClass = 'active';
-                cardContainer.appendChild(cardImage);
-            }
+            
         }
     }
     pullCard();
