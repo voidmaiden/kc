@@ -60,7 +60,9 @@ window.onload = function () {
             easymedium = document.getElementsByClassName('easymedium'),
             hard = document.getElementsByClassName('hard'),
             easymediumhard = document.getElementsByClassName('easymediumhard'),
-            expert = document.getElementsByClassName('expert');
+            expert = document.getElementsByClassName('expert'),
+            lvl34 = document.getElementsByClassName('lvl34'),
+            lvl1234 = document.getElementsByClassName('lvl1234');
         slider.onchange = function() {
             if (slider.value == '0') {
                 for (var i = 0; i < 2; i++) {
@@ -69,7 +71,9 @@ window.onload = function () {
                     easymedium[i].style.display = 'none';
                     hard[i].style.display = 'none';
                     easymediumhard[i].style.display = 'none';
-                    expert[i].style.display = 'none';   
+                    expert[i].style.display = 'none';
+                    lvl34[i].style.display = 'none';
+                    lvl1234[i].style.display = 'none';
                 }
             }
             else if (slider.value == '1') {
@@ -80,6 +84,8 @@ window.onload = function () {
                     hard[i].style.display = 'none';
                     easymediumhard[i].style.display = 'none';
                     expert[i].style.display = 'none';
+                    lvl34[i].style.display = 'none';
+                    lvl1234[i].style.display = 'none';
                 }
             }
             else if (slider.value == '2') {
@@ -90,6 +96,8 @@ window.onload = function () {
                     hard[i].style.display = 'none';
                     easymediumhard[i].style.display = 'none';
                     expert[i].style.display = 'none';
+                    lvl34[i].style.display = 'none';
+                    lvl1234[i].style.display = 'none';
                 }
             }
             else if (slider.value == '3') {
@@ -100,6 +108,8 @@ window.onload = function () {
                     hard[i].style.display = 'inline-block';
                     easymediumhard[0].style.display = 'none';
                     expert[i].style.display = 'none';
+                    lvl34[i].style.display = 'none';
+                    lvl1234[i].style.display = 'none';
                 }
             }
             else if (slider.value == '4') {
@@ -110,6 +120,8 @@ window.onload = function () {
                     hard[i].style.display = 'none';
                     easymediumhard[i].style.display = 'inline-block';
                     expert[i].style.display = 'none';
+                    lvl34[i].style.display = 'none';
+                    lvl1234[i].style.display = 'none';
                 }
             }
             else if (slider.value == '5') {
@@ -120,6 +132,32 @@ window.onload = function () {
                     hard[i].style.display = 'none';
                     easymediumhard[i].style.display = 'none';
                     expert[i].style.display = 'inline-block';
+                    lvl34[i].style.display = 'none';
+                    lvl1234[i].style.display = 'none';
+                }
+            }
+            else if (slider.value == '6') {
+                for (var i = 0; i < 2; i++) {
+                    easy[i].style.display = 'none';
+                    medium[i].style.display = 'none';
+                    easymedium[i].style.display = 'none';
+                    hard[i].style.display = 'none';
+                    easymediumhard[i].style.display = 'none';
+                    expert[i].style.display = 'none';
+                    lvl34[i].style.display = 'inline-block';
+                    lvl1234[i].style.display = 'none';
+                }
+            }
+            else if (slider.value == '7') {
+                for (var i = 0; i < 2; i++) {
+                    easy[i].style.display = 'none';
+                    medium[i].style.display = 'none';
+                    easymedium[i].style.display = 'none';
+                    hard[i].style.display = 'none';
+                    easymediumhard[i].style.display = 'none';
+                    expert[i].style.display = 'none';
+                    lvl34[i].style.display = 'none';
+                    lvl1234[i].style.display = 'inline-block';
                 }
             }
         }
