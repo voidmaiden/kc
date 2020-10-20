@@ -49,7 +49,8 @@ var expertCards = [
     'https://i.imgur.com/StRi59Z.png',
     'https://i.imgur.com/Loew64P.png'
     ]
-
+var lvl34Cards = hardCards.concat(expertCards);
+var lvl1234Cards = easyMediumHard.concat(expertCards);
 window.onload = function () {
 
     function sliderChange() {
@@ -172,6 +173,20 @@ window.onload = function () {
                 cardContainer.style.background = '#ABC54A';
                 var number = Math.floor(Math.random()*expertCards.length);
                 cardImage.src = expertCards[number];
+                cardImage.classList.addClass = 'active';
+                cardContainer.appendChild(cardImage);
+            }
+            if (slider.value == '6') {
+                cardContainer.style.background = '#ABC54A';
+                var number = Math.floor(Math.random()*lvl34Cards.length);
+                cardImage.src = lvl34Cards[number];
+                cardImage.classList.addClass = 'active';
+                cardContainer.appendChild(cardImage);
+            }
+            if (slider.value == '7') {
+                cardContainer.style.background = '#ABC54A';
+                var number = Math.floor(Math.random()*lvl1234Cards.length);
+                cardImage.src = lvl1234Cards[number];
                 cardImage.classList.addClass = 'active';
                 cardContainer.appendChild(cardImage);
             }
