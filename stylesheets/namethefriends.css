@@ -130,8 +130,8 @@ hr {
 .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 15px;
-    height: 15px;
+    width: 20px;
+    height: 20px;
     background: #48BEAC;
     cursor: grab;
     border-radius: 999px;
@@ -157,7 +157,7 @@ hr {
     letter-spacing: 1px;
     text-align: center;
 }
-.easy, span.easymedium, .hard, .easymediumhard, .expert {
+.easy, span.easymedium, .hard, .easymediumhard, .expert, .lvl34, .lvl1234 {
     display: none;
 }
 span.easy {
@@ -175,7 +175,7 @@ span.hard {
 span.easymediumhard {
     background: #FF0000;
 }
-span.expert {
+span.expert, span.lvl34, span.lvl1234 {
     background: #770000;
     color: #fff;
 }
